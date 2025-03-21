@@ -1,16 +1,61 @@
+[project]
+name = "py-refman"
+description = "A Rust extension module wrapping RefMan, a biological reference manager, for Python"
+authors = [
+  { name = "Nicholas R. Minor", email = "nrminor@wisc.edu" },
+]
+requires-python = ">=3.8"
+keywords = [
+    "science",
+    "biology",
+    "research",
+    "bioinformatics",
+    "sequencing",
+    "genomics",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+
+    "License :: OSI Approved :: MIT License",
+
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dynamic = ["version"]
+
 [build-system]
 requires = ["maturin>=1.4,<2.0"]
 build-backend = "maturin"
 
-[project]
-name = "py-refman"
-requires-python = ">=3.8"
-classifiers = [
-    "Programming Language :: Rust",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
-]
-dynamic = ["version"]
-
 [tool.maturin]
 features = ["pyo3/extension-module"]
+module-name = "refman"
+
+[tool.basedpyright]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "basic"
+
+[tool.ruff.lint]
+exclude = ["*.pyi"]
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.28.2",
+    "marimo>=0.8.22",
+    "maturin>=1.8.3",
+    "pytest>=8.3.5",
+    "ruff>=0.11.1",
+    "tox>=4.24.2",
+]
+

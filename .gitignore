@@ -7,6 +7,8 @@
 !README.md
 !LICENSE
 !pyproject.toml
+!py_refman.pyi
+!refman.pyi
 !uv.lock
 !Cargo.toml
 
@@ -14,14 +16,16 @@
 !/src/*.rs
 
 !/tests
+!/tests/test_*.py
+!/tests/__init__.py
 
 !/docs
 
 !/examples
 
 !/.github
-!/.github/worklows
-!/.github/worklows/*.yml
-!/.github/worklows/*.yaml
+!/.github/workflows
+!/.github/workflows/*.yml
+!/.github/workflows/*.yaml
 
 
