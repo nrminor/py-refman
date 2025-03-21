@@ -4,7 +4,7 @@ If you do bioinformatics, chances are your projects need a variety of different 
 
 `refman` offers one solution to this problem: manage all the combinations of reference datasets for your project(s) in one human-readable configuration file.
 
-The `refman` Python interface is available on [PyPI](), so simply run `pip install py-refman` in the command line to get started.
+The `refman` Python interface is available on [PyPI](https://pypi.org/project/py-refman/), so simply run `pip install py-refman` in the command line to get started.
 
 ## Basic Usage
 
