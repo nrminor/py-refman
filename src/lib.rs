@@ -134,7 +134,7 @@ impl PyRefDataset {
 
     #[getter]
     fn label(&self) -> &str {
-        self.0.label()
+        &self.0.label
     }
 
     #[getter]
